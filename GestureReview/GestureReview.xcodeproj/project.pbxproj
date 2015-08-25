@@ -14,6 +14,8 @@
 		86CACF6F1B8BEAC400439535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CACF6E1B8BEAC400439535 /* Images.xcassets */; };
 		86CACF721B8BEAC400439535 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CACF701B8BEAC400439535 /* LaunchScreen.xib */; };
 		86CACF7E1B8BEAC400439535 /* GestureReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CACF7D1B8BEAC400439535 /* GestureReviewTests.swift */; };
+		DBC64C171B8C00C400F5BF1E /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC64C151B8C00C400F5BF1E /* Friend+CoreDataProperties.swift */; };
+		DBC64C181B8C00C400F5BF1E /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC64C161B8C00C400F5BF1E /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		86CACF771B8BEAC400439535 /* GestureReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CACF7C1B8BEAC400439535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CACF7D1B8BEAC400439535 /* GestureReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureReviewTests.swift; sourceTree = "<group>"; };
+		DBC64C151B8C00C400F5BF1E /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DBC64C161B8C00C400F5BF1E /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		86CACF611B8BEAC400439535 /* GestureReview */ = {
 			isa = PBXGroup;
 			children = (
+				DBC64C151B8C00C400F5BF1E /* Friend+CoreDataProperties.swift */,
+				DBC64C161B8C00C400F5BF1E /* Friend.swift */,
 				86CACF641B8BEAC400439535 /* AppDelegate.swift */,
 				86CACF691B8BEAC400439535 /* ViewController.swift */,
 				86CACF6B1B8BEAC400439535 /* Main.storyboard */,
@@ -159,6 +165,8 @@
 		86CACF571B8BEAC400439535 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Miranda Paquet";
 				TargetAttributes = {
@@ -216,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86CACF6A1B8BEAC400439535 /* ViewController.swift in Sources */,
+				DBC64C171B8C00C400F5BF1E /* Friend+CoreDataProperties.swift in Sources */,
+				DBC64C181B8C00C400F5BF1E /* Friend.swift in Sources */,
 				86CACF651B8BEAC400439535 /* AppDelegate.swift in Sources */,
 				86CACF681B8BEAC400439535 /* GestureReview.xcdatamodeld in Sources */,
 			);
@@ -415,6 +425,7 @@
 				86CACF831B8BEAC400439535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86CACF841B8BEAC400439535 /* Build configuration list for PBXNativeTarget "GestureReviewTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +434,7 @@
 				86CACF861B8BEAC400439535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

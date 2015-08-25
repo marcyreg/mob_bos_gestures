@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var gesture: UILabel!
+  
+    @IBOutlet weak var gestureDirection: UILabel!
     
     
     override func viewDidLoad() {
@@ -18,13 +19,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        var onSwipe = UISwipeGestureRecognizer(target: self, action: "onGesture:")
-        
-        onSwipe.direction = UISwipeGestureRecognizerDirection.Down
-        self.view.addGestureRecognizer(onSwipe)
+        let onSwipeDown = UISwipeGestureRecognizer(target: self, action: "onGesture:")
+        onSwipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(onSwipeDown)
+        let onSwipeUp = UISwipeGestureRecognizer(target: self, action: "onGesture:")
+        onSwipeUp.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(onSwipeUp)
     }
     
-    func onSwipe(UISwipeGestureRecognizer,UISwipeGestureRecognizerDirection){
+    func onGesture(gesture: UIGestureRecognizer){
+        if let swipe = gesture as? UISwipeGestureRecognizer {
+            switch swipe.direction {
+            case UISwipeGestureRecognizerDirection.Down:
+                gestureDirection.text = "Swiping Downy"
+            case UISwipeGestureRecognizerDirection.Up:
+                gestureDirection.text = "Swiping Upy"
+            default:
+                print("I can't tell :(")
+            }
+        }
     }
 }
 
