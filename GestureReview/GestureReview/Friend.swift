@@ -18,7 +18,6 @@ class Friend: NSManagedObject {
 //    
 //    if let context = appDelegate.managedObjectContext {
     
-
     
     
 }

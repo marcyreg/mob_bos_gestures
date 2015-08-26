@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QGS-Ww-fFa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1zZ-2T-jJr">
+            <objects>
+                <navigationController id="QGS-Ww-fFa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n8V-wF-Ivz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Jr-HW-Jmf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1C-f2-PPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-734" y="295"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -24,22 +41,88 @@
                                     <constraint firstAttribute="height" constant="21" id="BcM-5a-AXM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFy-us-xbo">
+                                <rect key="frame" x="183" y="476" width="234" height="30"/>
+                                <state key="normal" title="Checking Age and Name of Friend">
+                                    <color key="titleColor" red="0.17205888029999999" green="0.63656198980000001" blue="0.91764706370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dOi-lD-f5t" kind="show" id="46z-P2-u6T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aFy-us-xbo" secondAttribute="bottom" constant="94" id="2B4-7a-awI"/>
                             <constraint firstAttribute="centerX" secondItem="gbw-Hu-Pja" secondAttribute="centerX" id="EFS-xg-1v2"/>
+                            <constraint firstItem="aFy-us-xbo" firstAttribute="centerX" secondItem="gbw-Hu-Pja" secondAttribute="centerX" id="JTv-m8-DaL"/>
                             <constraint firstAttribute="centerY" secondItem="gbw-Hu-Pja" secondAttribute="centerY" id="O8U-ez-JWl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YBX-Vf-8kX"/>
                     <connections>
                         <outlet property="gestureDirection" destination="gbw-Hu-Pja" id="MR9-qb-vfw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-97" y="295"/>
+        </scene>
+        <!--Adding Friend-->
+        <scene sceneID="8Ne-fp-ZgY">
+            <objects>
+                <viewController id="dOi-lD-f5t" customClass="AddingFriend" customModule="GestureReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zwz-pv-I5B"/>
+                        <viewControllerLayoutGuide type="bottom" id="AGz-tE-v8V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zK4-Ds-9xU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WMa-Ue-woH">
+                                <rect key="frame" x="225" y="114" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="mdx-MX-Pwh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BxG-2F-HNb">
+                                <rect key="frame" x="225" y="183" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-AV-nRe">
+                                <rect key="frame" x="180" y="252" width="240" height="289"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BxG-2F-HNb" firstAttribute="centerX" secondItem="zK4-Ds-9xU" secondAttribute="centerX" id="3XI-Xv-Ous"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u2g-AV-nRe" secondAttribute="trailing" constant="160" id="48T-Ph-ruW"/>
+                            <constraint firstItem="u2g-AV-nRe" firstAttribute="leading" secondItem="zK4-Ds-9xU" secondAttribute="leadingMargin" constant="160" id="Add-5c-x0O"/>
+                            <constraint firstItem="WMa-Ue-woH" firstAttribute="leading" secondItem="BxG-2F-HNb" secondAttribute="leading" id="JTm-cZ-4zI"/>
+                            <constraint firstItem="u2g-AV-nRe" firstAttribute="top" secondItem="BxG-2F-HNb" secondAttribute="bottom" constant="39" id="aeI-yZ-7dw"/>
+                            <constraint firstItem="BxG-2F-HNb" firstAttribute="trailing" secondItem="WMa-Ue-woH" secondAttribute="trailing" id="h7h-rm-Mtt"/>
+                            <constraint firstItem="BxG-2F-HNb" firstAttribute="top" secondItem="WMa-Ue-woH" secondAttribute="bottom" constant="39" id="taS-c1-EfC"/>
+                            <constraint firstItem="WMa-Ue-woH" firstAttribute="top" secondItem="Zwz-pv-I5B" secondAttribute="bottom" constant="50" id="tsp-Ch-J6R"/>
+                            <constraint firstItem="AGz-tE-v8V" firstAttribute="top" secondItem="u2g-AV-nRe" secondAttribute="bottom" constant="59" id="ud2-KT-heL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageInput" destination="BxG-2F-HNb" id="lj4-ya-dN9"/>
+                        <outlet property="friendList" destination="u2g-AV-nRe" id="WFH-2V-hvU"/>
+                        <outlet property="nameInput" destination="WMa-Ue-woH" id="3WG-kz-3XT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cg1-Oj-p86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="295"/>
         </scene>
     </scenes>
 </document>

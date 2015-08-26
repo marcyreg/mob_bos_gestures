@@ -14,6 +14,7 @@
 		86CACF6F1B8BEAC400439535 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CACF6E1B8BEAC400439535 /* Images.xcassets */; };
 		86CACF721B8BEAC400439535 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CACF701B8BEAC400439535 /* LaunchScreen.xib */; };
 		86CACF7E1B8BEAC400439535 /* GestureReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CACF7D1B8BEAC400439535 /* GestureReviewTests.swift */; };
+		DB790E991B8E6F380018B323 /* AddingFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB790E981B8E6F380018B323 /* AddingFriend.swift */; };
 		DBC64C171B8C00C400F5BF1E /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC64C151B8C00C400F5BF1E /* Friend+CoreDataProperties.swift */; };
 		DBC64C181B8C00C400F5BF1E /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC64C161B8C00C400F5BF1E /* Friend.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		86CACF771B8BEAC400439535 /* GestureReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CACF7C1B8BEAC400439535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CACF7D1B8BEAC400439535 /* GestureReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureReviewTests.swift; sourceTree = "<group>"; };
+		DB790E981B8E6F380018B323 /* AddingFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddingFriend.swift; path = ../AddingFriend.swift; sourceTree = "<group>"; };
 		DBC64C151B8C00C400F5BF1E /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DBC64C161B8C00C400F5BF1E /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +88,7 @@
 				DBC64C151B8C00C400F5BF1E /* Friend+CoreDataProperties.swift */,
 				DBC64C161B8C00C400F5BF1E /* Friend.swift */,
 				86CACF641B8BEAC400439535 /* AppDelegate.swift */,
-				86CACF691B8BEAC400439535 /* ViewController.swift */,
+				DB790E9A1B8E6F4F0018B323 /* VC Files */,
 				86CACF6B1B8BEAC400439535 /* Main.storyboard */,
 				86CACF6E1B8BEAC400439535 /* Images.xcassets */,
 				86CACF701B8BEAC400439535 /* LaunchScreen.xib */,
@@ -119,6 +121,15 @@
 				86CACF7C1B8BEAC400439535 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB790E9A1B8E6F4F0018B323 /* VC Files */ = {
+			isa = PBXGroup;
+			children = (
+				86CACF691B8BEAC400439535 /* ViewController.swift */,
+				DB790E981B8E6F380018B323 /* AddingFriend.swift */,
+			);
+			name = "VC Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +178,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Miranda Paquet";
 				TargetAttributes = {
 					86CACF5E1B8BEAC400439535 = {
@@ -223,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB790E991B8E6F380018B323 /* AddingFriend.swift in Sources */,
 				86CACF6A1B8BEAC400439535 /* ViewController.swift in Sources */,
 				DBC64C171B8C00C400F5BF1E /* Friend+CoreDataProperties.swift in Sources */,
 				DBC64C181B8C00C400F5BF1E /* Friend.swift in Sources */,
@@ -290,6 +302,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -358,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GestureReview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SegueGA.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -368,6 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GestureReview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SegueGA.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -386,6 +401,7 @@
 				);
 				INFOPLIST_FILE = GestureReviewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SegueGA.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureReview.app/GestureReview";
 			};
@@ -401,6 +417,7 @@
 				);
 				INFOPLIST_FILE = GestureReviewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SegueGA.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureReview.app/GestureReview";
 			};
